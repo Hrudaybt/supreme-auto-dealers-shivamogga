@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supreme Bajaj Shivamogga</title>
+    <style>
+        :root { 
+            --primary-color: #00529b; 
+            --secondary-color: #e2e8f0; 
+            --accent-color: #c53030; 
+            --text-dark: #2d3748; 
+            --text-light: #ffffff; 
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        
+        /* Smooth scrolling when clicking menu links */
+        html { scroll-behavior: smooth; }
+        
+        body { color: var(--text-dark); line-height: 1.6; background-color: #f7fafc; }
+        
+        /* Navigation */
+        header { background-color: var(--primary-color); padding: 1rem 5%; position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .logo h1 { color: white; font-size: 1.5rem; }
+        .logo span { font-weight: 300; }
+        nav ul { list-style: none; display: flex; gap: 2rem; }
+        nav a { color: var(--text-light); text-decoration: none; font-weight: 500; transition: 0.3s; }
+        nav a:hover { color: #ffd700; } 
+
+        /* Hero Section */
+        .hero { background: linear-gradient(rgba(0, 82, 155, 0.7), rgba(0, 82, 155, 0.7)), url('https://images.unsplash.com/photo-1558981403-c5f91adbe3c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover; height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; padding: 0 20px; }
+        .hero h2 { font-size: 3.5rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; }
+        .btn { padding: 12px 30px; background-color: var(--accent-color); color: white; text-decoration: none; border-radius: 5px; font-weight: bold; transition: 0.3s; border: none; cursor: pointer; display: inline-block; }
+        .btn:hover { background-color: #9b2c2c; }
+
+        /* General Section Styles */
+        .section-title { text-align: center; margin: 4rem 0 2rem; font-size: 2.5rem; color: var(--primary-color); padding-top: 2rem; }
+        .page-header { background: #e2e8f0; padding: 3rem 5%; text-align: center; margin-top: 4rem; }
+        .page-header h2 { color: var(--primary-color); font-size: 2.5rem; }
+
+        /* About Section */
+        .about-section { padding: 0 5%; text-align: center; max-width: 1000px; margin: 0 auto; }
+        .company-photo { width: 100%; max-height: 400px; object-fit: cover; border-radius: 10px; margin-bottom: 2rem; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        
+        /* Inventory Grids */
+        .inventory-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 4rem 5%; }
+        .card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s; }
+        .card:hover { transform: translateY(-5px); }
+        .card-img { height: 250px; background: #cbd5e0; display: flex; align-items: center; justify-content: center; }
+        .card-img img { width: 100%; height: 100%; object-fit: cover; }
+        .card-content { padding: 1.5rem; text-align: center; }
+        .card-content h3 { color: var(--primary-color); font-size: 1.5rem; margin-bottom: 0.5rem; }
+
+        /* Contact Section */
+        .content-area { padding: 4rem 5%; max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 3rem; }
+        .info, .form-container { flex: 1; min-width: 300px; }
+        .contact-card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .contact-card p { margin-bottom: 1rem; }
+        input, textarea { width: 100%; padding: 12px; margin-bottom: 1rem; border: 1px solid #cbd5e0; border-radius: 5px; }
+
+        footer { background-color: var(--primary-color); color: white; text-align: center; padding: 2rem; margin-top: 4rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><h1>Supreme <span>Bajaj</span></h1></div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#two-wheelers">2-Wheelers</a></li>
+                <li><a href="#three-wheelers">3-Wheelers</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="hero">
+            <h2>The World's Favourite Indian</h2>
+            <p>Your authorized dealer for Bajaj 2-Wheelers and 3-Wheelers in Shivamogga.</p>
+            <a href="#two-wheelers" class="btn">View Inventory</a>
+        </div>
+
+        <h2 class="section-title">Welcome to Supreme Auto Dealers</h2>
+        <div class="about-section">
+            <img src="showroom1.jpg" alt="Supreme Bajaj Showroom" class="company-photo">
+            <p>With years of expertise in the Shivamogga region, we provide the complete range of Bajaj vehicles, genuine spares, and authorized servicing to keep you moving.</p>
+        </div>
+    </section>
+
+    <section id="two-wheelers">
+        <div class="page-header">
+            <h2>Bajaj 2-Wheeler Lineup</h2>
+            <p>Power, performance, and mileage perfectly crafted for Indian roads.</p>
+        </div>
+
+        <div class="inventory-grid">
+            <div class="card">
+                <div class="card-img"><img src="ns.jpg" alt="Pulsar"></div>
+                <div class="card-content">
+                    <h3>Pulsar Series</h3>
+                    <p>The thrill of riding India's No.1 sports bike. Available in NS, RS, N, and classic series.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img"><img src="dominar.jpg" alt="Dominar"></div>
+                <div class="card-content">
+                    <h3>Dominar 400 & 250</h3>
+                    <p>Don't hold back. Experience the ultimate sports tourer for long highway rides.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img"><img src="platina.jpg" alt="Platina"></div>
+                <div class="card-content">
+                    <h3>Platina 100 & 110</h3>
+                    <p>Unmatched comfort with segment-first ABS and incredible everyday mileage.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img"><img src="avenger.jpg" alt="Avenger"></div>
+                <div class="card-content">
+                    <h3>Avenger Cruise & Street</h3>
+                    <p>Feel like God. A classic cruiser experience built for relaxed city riding and long trips.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img"><img src="ct.jpg" alt="CT Series"></div>
+                <div class="card-content">
+                    <h3>CT 110X & 125X</h3>
+                    <p>Kadak performance and unmatched durability designed for the toughest of Indian roads.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img"><img src="freedom.jpg" alt="Bajaj Freedom"></div>
+                <div class="card-content">
+                    <h3>Freedom 125 CNG</h3>
+                    <p>India's first CNG motorcycle! Revolutionary efficiency with dual-fuel capability.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img"><img src="chethak.jpg" alt="Bajaj Chetak EV"></div>
+                <div class="card-content">
+                    <h3>Chetak EV</h3>
+                    <p>The future of mobility. A premium electric scooter blending classic design with modern tech.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="three-wheelers">
+        <div class="page-header">
+            <h2>Commercial 3-Wheelers</h2>
+            <p>Reliable and rugged partners for your daily business needs.</p>
+        </div>
+
+        <div class="inventory-grid">
+            <div class="card">
+                <div class="card-img"><img src="re.jpg" alt="Bajaj RE Passenger"></div>
+                <div class="card-content">
+                    <h3>Bajaj RE (Passenger)</h3>
+                    <p>The iconic auto rickshaw providing a safe, comfortable, and economical ride for daily city commutes.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img"><img src="maxz.jpg" alt="Maxima Z"></div>
+                <div class="card-content">
+                    <h3>Maxima Z & X Wide</h3>
+                    <p>Spacious seating, rugged build, and a powerful engine for comfortable shared mobility and longer trips.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img"><img src="max.jpg" alt="Maxima Cargo"></div>
+                <div class="card-content">
+                    <h3>Maxima C (Cargo)</h3>
+                    <p>Heavy-duty suspension and incredible torque to carry all your heavy goods and logistics with ease.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img"><img src="reelc.jpg" alt="Bajaj RE E-Tec 9.0"></div>
+                <div class="card-content">
+                    <h3>RE E-Tec 9.0 (EV)</h3>
+                    <p>The zero-emission electric passenger auto. High range, low maintenance, and a completely silent ride.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img"><img src="cargo.jpg" alt="Maxima XL Cargo EV"></div>
+                <div class="card-content">
+                    <h3>Maxima XL Cargo (EV)</h3>
+                    <p>Transform your business with our high-capacity, all-electric commercial cargo vehicle.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="page-header">
+            <h2>Get in Touch</h2>
+            <p>Sales, service, or spares — we are here for you.</p>
+        </div>
+
+        <div class="content-area">
+            <div class="info">
+                <h2 style="color: #00529b; margin-bottom: 1rem;">Visit Our Locations</h2>
+                <div class="contact-card">
+                    <p>📍 <strong>Main Showroom:</strong><br> Shankar Matt Road, Shivamogga - 577201</p>
+                    <p>📍 <strong>Auto Spares & Service:</strong><br> New Mandli Circle, Vijayavani Office Compound, Gopala Road, Shivamogga - 577201</p>
+                    <p>📞 <strong>Phone:</strong> 08105000999</p>
+                    <p>✉️ <strong>Email:</strong> shimoga@supremeauto.in</p>
+                </div>
+            </div>
+
+            <div class="form-container">
+                <h2 style="color: #00529b; margin-bottom: 1rem;">Send an Inquiry</h2>
+                <form onsubmit="event.preventDefault(); alert('Inquiry sent! We will contact you soon.');">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="tel" placeholder="Phone Number" required>
+                    <textarea placeholder="Tell us which model or part you are looking for..." rows="5" required></textarea>
+                    <button type="submit" class="btn">Submit Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Supreme Auto Dealers Pvt Ltd. Shivamogga.</p>
+    </footer>
+
+</body>
+</html>
